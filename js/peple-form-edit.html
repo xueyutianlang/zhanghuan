@@ -1,0 +1,291 @@
+<?php $this->load->view('header.html',array('title'=>'商户信息管理--修改'));  ?>
+<div class="repastBackgroundPage">
+    <div class="repastBackgroundContent">
+    	<div class="repastBackgroundNav">
+        	<span>当前位置：</span><a href="/index.php/system/mainPanel/index">主面板</a>&nbsp;》&nbsp;<a href="/index.php/merchant/merchant/index">商户信息管理</a>&nbsp;》&nbsp;修改
+        </div>
+        <form action="<?php echo $urlEdit; ?>" method="post" id='myform'>
+        <div class="repastBackgroundDetails">
+            <p><span class="detailsWidth"><span class="red">*</span>窗口号：</span><select class="selectInput" id='window' name='window'>
+                <option selected="selected" value=''><?php echo $merchant->window; ?></option>
+               <?php if(isset($window)) {foreach($window as $value ){ ?>
+				<option value='<?php echo $value->window_id; ?>' ><?php echo $value->window_num; ?></option>
+               <?php } }?>
+				
+                </select><span class="red" id='windowMsg' ></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>商户名称：</span><input type="text" id='name' name='name' class="chooseInput tenant" value='<?php echo $merchant->name; ?>' /><span class="red" id='nameMsg'></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>经营品牌：</span><input type="text" id='brand' name ='brand' class="chooseInput"  value='<?php echo $merchant->brand; ?>' /><span class="red" id='brandMsg' ></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>法人代表：</span><input type="text" id='leperson' name='legal_person' class="chooseInput"  value='<?php echo $merchant->legal_person; ?>' /><span class="red" id='lepersonMsg' ></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>法人手机号：</span><input type="text"id='lpphone' name='legal_person_phone' class="chooseInput"  value='<?php echo $merchant->legal_person_phone; ?>' /><span class="red" id='lpphoneMsg'></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>入驻日期：</span><input type="text" id='time' name='in_time' class="chooseInput" onfocus="WdatePicker({isShowWeek:true,readOnly:true})"  value='<?php echo $merchant->in_time; ?>' /><span class="red" id='timeMsg'></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>保底金额：</span><span class="symbol">￥</span><input type="text" id='baseline' name='base_line' class="chooseInput"  value='<?php echo $merchant->base_line; ?>' /><span class="red" id='baselineMsg1' ></span><span class="red" id='baselineMsg2'></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>保底扣点比例：</span><input type="text" id='bppercent' name='base_point_percent' class="chooseInput"  value='<?php echo $merchant->base_point_percent; ?>' /><span class="lastSymbol">%</span><span class="red" id='bppercentMsg1'></span><span class="red" id='bppercentMsg2'></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>上限扣除金额：</span><span class="symbol">￥</span><input type="text" id='maxline' name='max_line' class="chooseInput"  value='<?php echo $merchant->max_line; ?>' /><span class="red" id='maxlineMsg1'></span><span class="red" id='maxlineMsg2'></span><span class="red" id='maxlineMsg3'></span>
+            </p> 
+            <p><span class="detailsWidth"><span class="red">*</span>毛利率：</span><input type="text" id='grossProfit' name='gross_profit' class="chooseInput"  value='<?php echo $merchant->gross_profit; ?>' /><span class="lastSymbol">%</span><span class="red" id='grossProfitMsg1'></span><span class="red" id='grossProfitMsg2'></span>
+            </p>
+            <p><span class="detailsWidth"><span class="red">*</span>自定义价格：</span>
+				<input type="radio" class="priceRadio" id='iscustomprice'  name='is_custom_price' value=2  />是
+				<input type="radio" class="priceRadio radioMagin" id='iscustomprices'  name='is_custom_price' value=1 />否
+				<span class="noRadio" id='hehe'>统一菜名：
+				<input type="text" class="chooseInput" id='customfoodname' name='custom_food_name' value=''  disabled="disabled" /></span>
+				<span class="red" id="customfoodnameMsg1"></span><span class="red" id='customfoodnameMsg2'></span>
+            </p> 
+            <p><span class="detailsWidth noWidth">备注：</span><textarea class="textareaUnify" name='note' id='note' ><?php echo $merchant->note; ?></textarea><span class="red textareaRed" id='noteMsg'></span>
+            </p>
+        </div>
+        <div class="inputButton">
+        	<input type="button"  class="save" id='sub' value="保&nbsp;&nbsp;&nbsp;存" /><button type="button" class="back" id='go_back'>返&nbsp;&nbsp;&nbsp;回</button>
+        </div>
+        </form>
+    </div>
+</div>
+<script src="/static/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" >
+/*控制文本框可不可用*/
+var yes = 2;
+$(".priceRadio").click(function(){
+	var id = this.id;
+	var v_val = $('#'+id).val();
+	if (v_val =='2')
+	{
+	    yes = 1;
+	    var customfoodname = $('[name="custom_food_name"]').attr('disabled',false);
+		$('#hehe').css('color','black');
+	}
+	else if (v_val =='1' )
+	{
+	   yes = 2;
+	   var customfoodname = $('[name="custom_food_name"]').attr('disabled',true);
+	   $("#hehe").css("color",'#999999');
+	}
+})
+/*统一验证*/
+$("#sub").click(function(){
+	var name = $("#name").val();//商户名称
+	var brand = $("#brand").val();//品牌
+	var leperson = $("#leperson").val();//法人
+	var lpphone = $("#lpphone").val();//法人手机
+	var time =$("#time").val();//入住时间
+	var baseline =$("#baseline").val();//保底金额
+	var bppercent =$("#bppercent").val();//保底扣点比例
+	var maxline =$("#maxline").val();//上限金额
+	var iscustomprice =$("#iscustomprice").val();//是否使用自定义价格
+	var customfoodname =$("#customfoodname").val();//自定义价格
+	var grossProfit =$("#grossProfit").val();//毛利率
+	var note =$("#note").val();
+	var flag = 0;
+	/*验证商户名称*/
+	if (name == '')
+	{
+		$("#nameMsg").html("不可为空");	
+	}
+	else 
+	{
+		flag++;
+		$("#nameMsg").html('');
+	}
+    /*验证品牌*/
+	if (brand == '')
+	{
+	    $("#brandMsg").html("不可为空");
+	}
+	else
+	{
+		flag++;
+		$("#brandMsg").html('');
+	}
+	/*验证法人代表*/
+	if (leperson == '')
+	{
+		$("#lepersonMsg").html("不可为空");
+	}
+	else
+	{
+		flag++;
+		$("#lepersonMsg").html('');
+	}
+	//法人手机验证
+	var reglpphone = /^[+86]?1(3|5|8)\d{9}$/;
+	if (lpphone == '' || !reglpphone.test(lpphone) )
+	{
+	     $("#lpphoneMsg").html("手机号格式错误");	
+	}
+	else if(reglpphone.test(lpphone))
+	{
+			flag++;
+			$("#lpphoneMsg").html('');
+	}
+	//入驻日期		
+	if(time =='' )
+	{
+		$('#timeMsg').html('不可为空');
+	}
+	else
+	{
+		flag++;
+		$('#timeMsg').html('');
+	}
+    //验证保底金额	   
+	var regbaseline= /^(0|[1-9][0-9]{0,6})(\.[0-9]{1,2})?$/;
+	if (baseline == '' )
+	{
+		$('#baselineMsg1').html('不可为空');
+		$('#baselineMsg2').html('');
+	}
+	else if(false  == regPrice('baseline'))
+	{
+		$('#baselineMsg2').html('金额格式错误');
+		$('#baselineMsg1').html('');
+	}
+	else
+	{
+		flag++;
+		$('#baselineMsg1').html('');
+		$('#baselineMsg2').html('');
+	}
+	//保底扣点比例
+	var regbppercent= /^(0|[1-9][0-9]{0,1})?$/;
+	if (bppercent == '' )
+	{
+		$('#bppercentMsg1').html('不可为空');
+		$('#bppercentMsg2').html('');
+	}
+	else if(!regbppercent.test(bppercent))
+	{	
+		$('#bppercentMsg2').html('请输入整数');
+		$('#bppercentMsg1').html('');
+	}
+	else
+	{
+		flag++;
+		$('#bppercentMsg1').html('');
+		$('#bppercentMsg2').html('');
+	}
+	//验证上限扣除金额		
+	if (maxline == '' )
+	{
+		$('#maxlineMsg1').html('不可为空');
+		$('#maxlineMsg2').html('');
+		$('#maxlineMsg3').html('');
+	}
+	else if(false  == regPrice('maxline'))
+	{
+		$('#maxlineMsg2').html('金额格式错误');
+		$('#maxlineMsg1').html('');
+		$('#maxlineMsg3').html('');
+	}
+	else if(parseFloat(maxline) < parseFloat(baseline) )
+	{	
+		$('#maxlineMsg3').html('不能低于保底金额');
+		$('#maxlineMsg1').html('');
+		$('#maxlineMsg2').html('');
+	}
+	else 
+	{
+		flag++;	
+		$('#maxlineMsg3').html('');
+		$('#maxlineMsg1').html('');
+		$('#maxlineMsg2').html('');
+	}	
+	
+	/*验证活码*/
+	if(yes==1)
+	{
+		if(customfoodname == '')
+		{
+		    $('#customfoodnameMsg1').html('不可为空');
+			$('#customfoodnameMsg2').html('');
+		}
+		else if(customfoodname.length >8)
+		{
+			$('#customfoodnameMsg2').html('需少于8个汉字');
+			$('#customfoodnameMsg1').html('');
+		}
+		else 
+		{
+			flag++;
+			$('#customfoodnameMsg2').html('');
+			$('#customfoodnameMsg1').html('');
+		}
+	}
+	else if (yes ==2)
+	{
+	   flag++;
+	   $('#customfoodnameMsg2').html('');
+	   $('#customfoodnameMsg1').html('');
+	}
+	//验证备注	
+		if (note !='')
+	    {
+	        if(note.length >50)
+			{
+			    $('#noteMsg').html('备注需少于50个汉字');	      
+			}
+		    else
+		    {	
+				flag++;
+				$('#noteMsg').html('');
+			}
+		}
+		else if(note =='')
+		{     
+			flag++;
+			$('#noteMsg').html('');
+		}
+	//验证毛利率
+	var gpText1= /^([1-9][0-9]{0,1})$/;
+	var gpText2= /^(0\.[0-9][0-9]{0,1})$/;
+	if (grossProfit == '')
+	{
+		$('#grossProfitMsg1').html('不可为空');
+		$('#grossProfitMsg2').html('');
+	}
+	else
+	{
+		var regarea = /^(0|[1-9][0-9]{0,1})(\.[0-9]{1,2})?$/;
+		if(grossProfit>1 && regarea.test(grossProfit) && grossProfit<100)
+		{
+			flag++;
+			$('#grossProfitMsg1').html('');
+			$('#grossProfitMsg2').html('');
+		}
+		else
+		{
+			$('#grossProfitMsg2').html('请输入大于1且小于100的数字，精确到两位小数');
+			$('#grossProfitMsg1').html('');
+		}
+	}
+        if(flag ==11)
+		{
+			$('#myform').submit();
+		}	
+});
+
+//返回按钮
+$('#go_back').click(function(){
+	window.location.href='<?php echo $url; ?>';
+});
+$(document).ready(function(){
+	if(<?php echo $merchant->is_custom_price; ?> == 2)
+	{
+		$('#customfoodname').val('<?php echo $merchant->custom_food_name; ?>');
+	    var customfoodname = $('[name="custom_food_name"]').attr('disabled',false);
+		$('#hehe').css('color','black');
+		$("#iscustomprice").attr("checked","checked" );
+	}
+	else
+	{
+		$("#iscustomprices").attr("checked","checked" );
+	}
+});
+</script>
+<?php $this->load->view('footer.html');  ?>
