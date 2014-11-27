@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>张欢自动联想功能 </title>
+<link href="/static/css/zh.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/static/zh/jquery-1.9.0.min.js"></script>
+</head>
+<body> 
+<div class="datas">
+	<p class="xnComment">
+    <span>图片组编号：</span><input type="text" autocomplete="off" class="input_wid" name='num' id='pnumber' value='' >
+    <span class="ts">例如：0801-001</span>
+    <ul class="add-div" id='ullist' style="display:none;">
+    </ul>
+    </p>
+</div>
+<script type="text/javascript">
+$(function(){
+	//图片组编号自动联想功能
+	$('#pnumber').keyup(function(){
+	  
+	   $('#ullist').html('');
+	   var values = $('#pnumber').val();
+	   if(values != '')
+	   {
+	       //过滤空格数据
+		   var valuess =  values.replace(/^\s+$/g,'');
+		   if(valuess != '')
+		   {
+		       //匹配输入的数据是否有效
+			   var  strreg =/^((\d{0,8})|([\-]{0,8})|([\d\-]{0,8}))$/;
+			   if(strreg.test(valuess))
+			   {
+			       var pleng = $('#pnumber').val().length;
+				    var  year =$('#year').val();
+					var num = Math.random();
+				   if(pleng >= 3)
+				   {  
+					  $.post('/index.php/data/data_goods_img_chose/Ajax?'+num,{'gname': valuess,'year': year,'num':num},function(e){
+                      //现在data的类型只是string，现在我们把它转换成JSON对象 
+					     if(e.status ==1)
+					     {
+					         var str ='';
+                             $.each(e.data, function(index, content)
+                             { 
+						         str += "<li style='cursor:pointer;' onmouseover='javascript: changecolor(this);' onclick='javascript:changeul(\""+content.group_name+"\");'>"+content.group_name+"</li>";
+                             });
+						     if(str!='')
+						     {						  
+								 $('#ullist').append(str);
+							     $('#ullist').show();
+								 $('#dataflag').val('yes');
+						     }
+					      }
+						  else
+						  {
+						      $('#ullist').hide();
+							  $('#dataflag').val('error');
+						  }
+	                  },'json');
+				   }
+			   }
+			   else
+			   {
+				  //清楚错误的信息
+				   var numbers = valuess.match(/^[\d\-]*/);
+				   $('#pnumber').val(numbers);
+			   }
+		   }
+	   }
+	})
+
+}
+</script>
+</body>
+</html>
