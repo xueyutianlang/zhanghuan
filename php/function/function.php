@@ -9,7 +9,7 @@
 
 /**
   * 封装跳页方法
-  * @param string - jumpurl[跳页的路径,例如:/index.php/virtual_data\index?a=1&b=2][不可为空]
+  * @param string - jumpurl[跳页的路径,例如:/index.php/vir\index?a=1&b=2][不可为空]
   * @param int - totalrow[总记录数][不可为空]
   * @param string - pageinfo[分页信息,例如: 首页 上一页 1 2 3 下一页 尾页][不可为空]
   * @param string - jumppagetype[定义偏移量是谁,例如:per_page][不可为空]
