@@ -37,3 +37,19 @@ function jumpGo(jumpId,urlone,totalpage,per_page)
 	}
 }
 
+/*
+ * javascript实现验证字符长度
+ *
+ * @author -- zhanghuan
+ * @date   -- 2014.12.02
+ * @param  -- string - inputId [针对input框的ID]
+ *            number - number  [字符个数]
+ * @return -- bool          
+*/
+function stringLength(inputId,number)
+{
+	var inputValue = document.getElementById(inputId).value; 
+	var returnValue = inputValue.length > number ? false : true;
+	return returnValue;
+}
+
