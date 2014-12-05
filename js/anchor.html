@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>雪域天狼</title>
+<meta name="description" content="雪域天狼" />
+<meta name="keywords" content="雪域天狼" /> 
+<style type="text/css">
+*{
+	margin:0;padding:0;border:none;	
+	}
+.year-page{
+	width:1200px;margin:0 auto;position:relative;text-align:center;
+	}	
+.year-page .icon{
+	list-style-type:none;position:fixed;width:18px;bottom:30px;right:15%;	
+	}
+.year-page .icon li{
+	width:18px;height:18px;margin-bottom:10px;
+	}
+.year-page .icon a{
+	width:18px;height:18px;display:inline-block;background:url(images/icon_07.png);outline:none;
+	}
+.year-page area{
+	outline:none;
+	}
+.year-page .icon .icon-active{
+	background:url(images/icon_10.png);	
+	}
+</style>
+</head>
+
+<body>
+<div class="year-page">
+	<div><img src="images/year_02.gif" /></div>
+	<div><img src="images/year_03.gif" usemap="#Map2" border="0" />
+        <map name="Map2" id="Map2">
+            <area shape="rect" coords="600,177,1126,212" href="2014/120402.html" target="_blank"/>
+        </map>
+	</div>
+	<div><img src="images/year_04.gif" usemap="#Map" border="0" />
+        <map name="Map" id="Map">
+            <area shape="rect" coords="62,44,435,91" href="2014/12401.html" target="_blank" />
+            <area shape="rect" coords="57,102,549,146" href="2014/120403.html" target="_blank"/>
+            <area shape="rect" coords="601,-24,1127,30" href="2014/120402.html" target="_blank"/>
+            <area shape="rect" coords="598,38,849,86" href="2014/120404.html" target="_blank"/>
+            <area shape="rect" coords="595,89,971,144" href="2014/120405.html" target="_blank"/>
+        </map>
+	</div>
+	<div><a name="o" href="2014/12401.html" target="_blank"><img src="images/year_05.gif" /></a></div>
+	<div><a href="2014/12401.html" target="_blank"><img src="images/year_06.gif" /></a></div>
+	<div><a href="2014/12401.html" target="_blank"><img src="images/year_07.gif"/></a></div>
+	<div><a name="t" href="2014/120402.html" target="_blank"><img src="images/year_08.gif" /></a></div>
+	<div><a href="2014/120402.html" target="_blank"><img src="images/year_09.gif" /></a></div>
+	<div><a href="2014/120402.html" target="_blank"><img src="images/year_10.gif"/></a></div>
+	<div><a href="2014/120403.html" name="th" target="_blank"><img src="images/year_11.gif" /></a></div>
+	<div><a href="2014/120403.html" target="_blank"><img src="images/year_12.gif" /></a></div>
+	<div><a href="2014/120403.html" target="_blank"><img src="images/year_13.gif" /></a></div>
+	<div><a href="2014/120404.html" name="f" target="_blank"><img src="images/year_14.gif" /></a></div>
+	<div><a href="2014/120404.html" target="_blank"><img src="images/year_15.gif" /></a></div>
+	<div><a href="2014/120404.html" target="_blank"><img src="images/year_16.gif" /></a></div>
+	<div><a href="2014/120405.html" name="fi" target="_blank"><img src="images/year_17.gif" /></a></div>
+	<div><a href="2014/120405.html" target="_blank"><img src="images/year_18.gif" /></a></div>
+	<div><a href="2014/120405.html" target="_blank"><img src="images/year_19.gif" /></a></div>
+    <ul class="icon">
+    	<li><a id="a0" class="icon-active" href="#o"></a></li>
+    	<li><a id="a1" href="#t"></a></li>
+    	<li><a id="a2" href="#th"></a></li>
+    	<li><a id="a3" href="#f" ></a></li>
+    	<li><a id="a4" href="#fi"></a></li>
+    </ul>
+</div>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$('.icon>li>a').click(function(){
+	$(this).addClass('icon-active').parent().siblings().children('a').removeClass('icon-active');
+});
+</script>
+</body>
+</html>
