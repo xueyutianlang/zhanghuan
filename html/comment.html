@@ -1,0 +1,749 @@
+{include file="new_header.html"}
+<style>
+*{margin:0;padding:0;}
+body{font-family:"微软雅黑";}
+a{outline:none}
+img{border:none; vertical-align:top}
+.fl{float:left}
+.fr{float:right}
+.cfix:after{visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
+.cfix{zoom: 1;}
+li{list-style:none;}
+.w1200{width:1200px; margin:0 auto; position: relative}
+.ta{background:url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_05.jpg) no-repeat left top; width:1200px; height:68px; position:relative;}
+.t1{position: absolute; left: 295px; top: 14px; width: 133px; height: 43px; line-height:18px; font-size:12px; overflow:hidden;}
+.t2{position: absolute; left: 578px; top: 13px; width: 133px; height: 37px; line-height:18px; font-size:12px; overflow:hidden;}
+.t3{position: absolute; left: 814px; top: 18px; width: 133px; height: 34px; line-height:18px; font-size:12px; overflow:hidden;}
+.zxj{ margin:40px 0 0 0;}
+.zxjmain{margin:20px 0 0 0;}
+.zxlist{width:412px; float:left;}
+.zxlist ul{padding:0 0 0 10px;}
+.zxlist ul li{height:89px; padding:0 0 0 40px; border-bottom:1px dotted #8193ae; position:relative; margin-bottom:15px;}
+.zxlist ul li img{position:absolute; left:6px; top:0px;}
+.zxlist ul li p{font:bold 12px/22px "微软雅黑"; margin:6px 0 0 0; color:#8c8c8c; font-size:12px;}
+.zxpic{width:765px; float:right;}
+.zxpic img{float:left;}
+/*.mr1{margin:0 1px 1px 0 ;}*/
+
+.mb1{margin:0 0 1px 0}
+.mb2{margin:0 0 2px 0}
+a.org:link{font:bold 18px/22px "微软雅黑";text-decoration:none;color:#222222;}
+a.org:visited{font:bold 18px/22px "微软雅黑";color:#222222;}
+a.org:hover{font:bold 18px/22px "微软雅黑"; text-decoration:underline; transition:1s; color:#f68b18;}
+.jaj{background:#FFF;}
+.jaj1{width:380px; float:left; margin:0 2px 0 0}
+.jaj2{width:300px; float:left; margin:0 2px 0 0}
+.jaj3{width:516px; float:left;}
+.qzj1{width:399px; float:left; margin:0 2px 0 0}
+.qzj2{width:398px; float:left; margin:0 2px 0 0}
+.qzj3{width:399px; float:left;}
+.fg1{width:380px;height:487px; background:url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_46.jpg) no-repeat left top; position:relative; overflow:hidden;}
+.fg2{width:300px; height:318px; background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_42.jpg) no-repeat left top; position:relative; margin:0 0 2px 0;overflow:hidden;}
+.fg3{width:300px; height:318px; background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_49.jpg) no-repeat left top; position:relative;overflow:hidden;}
+.fg4{width:516px; height:318px; background:url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_44.jpg) no-repeat left top; position:relative; margin:0 0 2px 0;overflow:hidden;}
+.fg5{width:516px; height:318px; background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_50.jpg) no-repeat left top; position:relative;overflow:hidden;}
+.balck1{background:#000; height:66px; filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity: 0.7; opacity: 0.7; position:absolute; bottom:-66px; left:0; width:380px;}
+.balck2{background:#000; height:66px; filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity: 0.7; opacity: 0.7; position:absolute; bottom:-66px; left:0; width:300px;}
+.balck3{background:#000; height:66px; filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity: 0.7; opacity: 0.7; position:absolute; bottom:-66px; left:0; width:516px;}
+.fgtit{color:#FFF; text-align:center; width:260px; margin:0 auto; position:relative;}
+.fgtit li{line-height:34px; border-bottom:1px dotted #666666;}
+.fgtit li.bordernone{border:none;}
+a.wa:link{color:#FFF; text-decoration:none; font-size:12px;}
+a.wa:visited{color:#FFF; text-decoration:none; font-size:12px;}
+a.wa:hover{color:#FFF; text-decoration:none; font-size:12px;}
+a.more:link{color:#000; text-decoration:none; font-size:12px;}
+a.more:visited{color:#000; text-decoration:none; font-size:12px;}
+a.more:hover{color:#F00; text-decoration:none; font-size:12px;}
+.fg1:hover .balck1{bottom:0;-webkit-transition:bottom .5s ease;-moz-transition:bottom .5s ease;transition:bottom .5s ease;}
+.fg2:hover .balck2{bottom:0; -webkit-transition:bottom .5s ease;-moz-transition:bottom .5s ease;transition:bottom .5s ease;}
+.fg3:hover .balck2{bottom:0; -webkit-transition:bottom .5s ease;-moz-transition:bottom .5s ease;transition:bottom .5s ease;}
+.fg4:hover .balck3{bottom:0; -webkit-transition:bottom .5s ease;-moz-transition:bottom .5s ease;transition:bottom .5s ease;}
+.fg5:hover .balck3{bottom:0; -webkit-transition:bottom .5s ease;-moz-transition:bottom .5s ease;transition:bottom .5s ease;}
+.gdshtit{background:url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_10.jpg) no-repeat left center; width:1200px; height:35px; position:relative;}
+.gdshtit span{position:absolute; right:20px; bottom:15px;}
+.gdshtit3{background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_10-08.jpg) no-repeat left center;}
+.gdshtit2{background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/gdsh_1000.jpg) no-repeat left center;}
+.gdshtit:hover span{
+    -webkit-transition:all 1s ease-in-out;
+    -webkit-transform:scale(5,5);
+    -webkit-transform:rotate(360deg);
+    -moz-transition:all 1s ease-in-out;
+    -moz-transform:scale(5,5);
+    -moz-transform:rotate(360deg);
+    transition:all 1s ease-in-out;
+    transform:scale(5,5);
+    transform:rotate(360deg);
+}
+/*
+li{
+    display:inline;
+    list-style:none;
+    list-style-position:outside;
+    text-align:center;
+    font-weight:bold;
+    float:left;
+}
+*/
+#nav li{
+    display:inline;
+    list-style:none;
+    list-style-position:outside;
+    text-align:center;
+    font-weight:bold;
+    float:left;
+}
+#nav a:link{
+    color:#555555;
+    text-decoration:none;
+    float:left;
+    width:200px;
+    padding:3px 5px 0px 5px;
+}
+#nav a:visited{
+    color:#555555;
+    text-decoration:none;
+    float:left;
+    padding:3px 5px 0px 5px;
+    width:200px;
+}
+#nav a:hover{
+    color:white;
+    float:left;
+    padding:3px 3px 0px 10px;
+    width:190px;
+    text-decoration:none;
+    background-color:#F56200;
+}
+#nav a:active{
+    color:white;
+    float:left;
+    padding:3px 3px 0px 20px;
+    width:100px;
+    text-decoration:none;
+    background-color:#BD06B4;
+}
+#nav{
+    width:1200px;
+    height:50px;
+    border-bottom:0px;
+    padding:0px 5px;
+    position:absolute;
+    z-index:1;
+    left:0;
+    top: 490px;
+}
+.list{
+    line-height:40px;
+    text-align:left;
+    padding:4px;
+    font-weight:normal;
+}
+.menu1{
+    width:226px;
+    height:auto;
+    margin:6px 5px 0px 5px;
+    border:1px solid #F88D19;
+    background-color:#FEEFDE  ;
+    color:#FA8816;
+    padding:6px 0px 0px 0px;
+    cursor:hand;
+}
+.menu2{
+    width:226px;
+    height:30px;
+    margin:6px 5px 0px 5px;
+    background-color:#F5F5F5;
+    color:#999999;
+    border:1px solid #EEE8DD;
+    padding:6px 0px 0px 0px;
+    overflow-y:hidden;
+    cursor:hand;
+}
+.border2g{ border:2px solid #f60; }
+.border2w{ border:2px solid #fff; }
+
+.banner{ width:1200px; height:482px; background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/banner.jpg) no-repeat left center; position:relative;color:#fff; font:12px/14 "微软雅黑";  }
+
+.banner p span{display:block; text-align:left; border:0px solid #f60; overflow:hidden; }
+a.bLink:link,a.bLink:visited{color:#fff;text-decoration:none;}
+a.bLink:hover{text-decoration:underline; }
+
+
+.al1{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al1.jpg) no-repeat;
+	width: 133px;
+	height: 66px;
+	line-height: 16px; padding:8px 0 0 20px;
+	text-align: left;
+	position: absolute;
+	left: 18px;
+	top: 18px;
+}
+p.al1 span{ width:110px;height:30px; }
+
+.bl1{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al1.jpg) no-repeat;
+	width: 133px;
+	height: 66px;
+	line-height: 16px;
+	padding: 8px 0 0 20px;
+	text-align: left;
+	position: absolute;
+	left: 200px;
+	top: 30px;
+}
+p.bl1 span{ width:110px;height:30px; }
+.al2{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al2.jpg) no-repeat;
+	width: 133px;
+	height: 66px;
+	line-height: 16px;
+	padding: 8px 0 0 15px;
+	text-align: left;
+	position: absolute;
+	left: 147px;
+	top: 122px;
+}
+p.al2 span{ width:96px;height:30px;  }
+.bl2{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al1.jpg) no-repeat;
+	width: 133px;
+	height: 66px;
+	line-height: 16px;
+	padding: 8px 0 0 20px;
+	text-align: left;
+	position: absolute;
+	left: 21px;
+	top: 123px;
+}
+p.bl2 span{ width:110px;height:30px; }
+
+.al3{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al3.jpg) no-repeat;
+	width: 133px;
+	height: 66px;
+	line-height: 16px;
+	padding: 10px 0 0 25px;
+	text-align: left;
+	position: absolute;
+	left: 26px;
+	top: 224px;
+}
+p.al3 span{ width:90px;height:30px;  }
+.bl3{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al3.jpg) no-repeat;
+	width: 133px;
+	height: 66px;
+	line-height: 16px;
+	padding: 10px 0 0 25px;
+	text-align: left;
+	position: absolute;
+	left: 226px;
+	top: 224px;
+}
+p.bl3 span{ width:90px;height:30px; }
+.al4{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al4.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 8px 0 0 25px;
+	text-align: left;
+	position: absolute;
+	left: 160px;
+	top: 300px;
+}
+p.al4 span{ width:170px;height:30px;  }
+.bl4{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/al4.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 8px 0 0 23px;
+	text-align: left;
+	position: absolute;
+	left: 40px;
+	top: 317px;
+}
+p.bl4 span{ width:170px;height:30px; }
+
+.ar5{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar1.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 8px 0 0 20px;
+	text-align: left;
+	position: absolute;
+	left: 957px;
+	top: 9px;
+}
+p.ar5 span{ width:120px;height:30px;  }
+.br5{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar1.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 8px 0 0 20px;
+	text-align: left;
+	position: absolute;
+	left: 850px;
+	top: 60px;
+}
+p.br5 span{ width:110px;height:30px; }
+.ar6{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar2.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 10px 0 0 26px;
+	text-align: left;
+	position: absolute;
+	left: 840px;
+	top: 150px;
+}
+p.ar6 span{ width:170px;height:30px;  }
+.br6{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar2.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 10px 0 0 26px;
+	text-align: left;
+	position: absolute;
+	left: 947px;
+	top: 191px;
+}
+p.br6 span{ width:170px;height:30px; }
+.ar7{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar3.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 10px 0 0 26px;
+	text-align: left;
+	position: absolute;
+	left: 921px;
+	top: 214px;
+}
+p.ar7 span{ width:110px;height:30px;  }
+.br7{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar3.jpg) no-repeat;
+	width: 218px;
+	height: 67px;
+	line-height: 16px;
+	padding: 10px 0 0 26px;
+	text-align: left;
+	position: absolute;
+	left: 840px;
+	top: 330px;
+}
+p.br7 span{ width:110px;height:30px; }
+.ar8{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar4.jpg) no-repeat;
+	width: 129px;
+	height: 73px;
+	line-height: 16px;
+	padding: 10px 0 0 15px;
+	text-align: left;
+	position: absolute;
+	left: 950px;
+	top: 290px;
+}
+p.ar8 span{ width:90px;height:30px;  }
+.br8{
+	background: url(/themes/mall/ljljmall/styles/default/images/lj_topic_tashuo/ar4.jpg) no-repeat;
+	width: 129px;
+	height: 73px;
+	line-height: 16px;
+	padding: 10px 0 0 15px;
+	text-align: left;
+	position: absolute;
+	left: 1000px;
+	top: 250px;
+}
+p.br8 span{ width:90px;height:30px; }
+</style>
+</head>
+<body>
+  <div class="w1200" style="overflow:hidden;margin:0 auto 20px auto">
+    <div class="banner">
+    <p id='fal1' class="al1"><span ><a id='al1' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl1' class="bl1"><span ><a id='bl1' class='bLink' target="_blank" href='#'></a></span></p>
+    
+    <p id='fal2' class="al2"><span ><a id='al2' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl2' class="bl2"><span ><a id='bl2' class='bLink' target="_blank" href='#'></a></span></p>
+    
+    <p id='fal3' class="al3"><span ><a id='al3' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl3' class="bl3"><span ><a id='bl3' class='bLink' target="_blank" href='#'></a></span></p>
+   
+    <p id='fal4' class="al4"><span ><a id='al4' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl4' class="bl4"><span ><a id='bl4' class='bLink' target="_blank" href='#'></a></span></p>
+
+    <p id='fal5' class="ar5"><span ><a id='al5' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl5' class="br5"><span ><a id='bl5' class='bLink' target="_blank" href='#'></a></span></p>
+
+    <p id='fal6' class="ar6"><span ><a id='al6' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl6' class="br6"><span ><a id='bl6' class='bLink' target="_blank" href='#'></a></span></p>
+
+    <p id='fal7' class="ar7"><span ><a id='al7' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl7' class="br7"><span ><a id='bl7' class='bLink' target="_blank" href='#'></a></span></p>
+
+    <p id='fal8' class="ar8"><span ><a id='al8' class='bLink' target="_blank" href='#'></a></span></p>
+    <p id='fbl8' class="br8"><span ><a id='bl8' class='bLink' target="_blank" href='#'></a></span></p>
+   </div>
+    <!-- nav start -->
+    <div id="nav">
+      <ul>
+        <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+          资讯快报
+          <div class="list">
+            <a href="http://www.ljlj.cc/article/25/" target="_blank">品牌资讯</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/26/" target="_blank">行业资讯</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/27/" target="_blank">新品速递</a>
+            <br />
+          </div>
+        </li>
+        <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+          促销活动
+		  <div class="list">
+			  <!--zhanghuan 20141117 add start --> 
+			  <a href="http://www.ljlj.cc/article/28/" target="_blank">促销活动</a>
+			  <!--zhanghuan 20141117 add end-->
+		  </div>
+        </li>
+        <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+          家居美图
+          <div class="list">
+            <a href="http://www.ljlj.cc/article/29/" target="_blank">创意家居</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/30/" target="_blank">家居设计</a>
+            <br />
+          </div>
+        </li>
+        <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+          装修知识
+          <div class="list">
+            <a href="http://www.ljlj.cc/article/31/" target="_blank">收房验房</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/32/" target="_blank">前期准备</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/33/" target="_blank">装修设计</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/34/" target="_blank">建材选购</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/35/" target="_blank">硬装施工</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/36/" target="_blank">装修验收</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/37/" target="_blank">家具选购</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/38/" target="_blank">软装配饰</a>
+            <br />
+          </div>
+        </li>
+        <li class="menu2" onmouseover="this.className='menu1'" onmouseout="this.className='menu2'">
+          蓝景乐居
+          <div class="list">
+            <a href="http://www.ljlj.cc/article/39/" target="_blank">生活知识</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/40/" target="_blank">家居保养</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/41/" target="_blank">家居风水</a>
+            <br />
+            <a href="http://www.ljlj.cc/article/42/" target="_blank">乐趣生活</a>
+            <br />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- nav end -->
+    <div class="zxj">
+      <p>&nbsp;</p>
+      <div class="gdshtit">
+        <span>
+          <a href="http://www.ljlj.cc/article/4/" target="_blank" class="more">MORE ></a>
+        </span>
+      </div>
+      <div class="zxjmain cfix">
+        <div class="zxlist">
+          <ul>
+            <li>
+              <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_13.jpg}" width="30" height="40"  alt=""/>
+              <a id='list_1' onmouseover='imgchange(this.id,1)' onmouseout='imgchange(this.id,2)' href="http://www.ljlj.cc/article/view/5954/" target="_blank" class="org">家有玩童乐趣多，儿童房健康涂料巧选择</a>
+              <p>又到十一家装促销季了，今年最后一次的装修促销活动马上就要如火如荼的的开展了</p>
+            </li>
+            <li>
+              <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_13-06.jpg}" width="30" height="40"  alt=""/>
+              <a  id='list_2' onmouseover='imgchange(this.id,1)' onmouseout='imgchange(this.id,2)'  href="http://www.ljlj.cc/article/view/5955/" target="_blank"  class="org">开放式厨房完美配，小小空间巧利用</a>
+              <p>现在都市寸土寸金，房子也来越小，很多家庭的独立厨房已经悄然消失，随着年轻人西方饮食观念的变化</p>
+            </li>
+            <li>
+              <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_13-07.jpg}" width="30" height="40"  alt=""/>
+              <a  id='list_3' onmouseover='imgchange(this.id,1)' onmouseout='imgchange(this.id,2)'  href="http://www.ljlj.cc/article/view/5956/" target="_blank" class="org">小户型客厅巧搭配，小窝也能更美好。</a>
+              <p>现今的社会忙碌而嘈杂，让每个都市人都很疲惫，没有多余的时间懒于打理自己的家，但是有句话说的好</p>
+            </li>
+            <li>
+              <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_13-10.jpg}" width="30" height="40"  alt=""/>
+              <a  id='list_4' onmouseover='imgchange(this.id,1)' onmouseout='imgchange(this.id,2)'  href="http://www.ljlj.cc/article/view/5958/" target="_blank" class="org">卧室布置，巧妙打造舒适睡眠天地</a>
+              <p>忙忙碌碌的工作压力，让每个都市人都换上了晚睡强迫症，不管是噪音空气的污染还是自由的时间变短</p>
+            </li>
+            <li>
+              <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_13-11.jpg}" width="30" height="40"  alt=""/>
+              <a  id='list_5' onmouseover='imgchange(this.id,1)' onmouseout='imgchange(this.id,2)'  href="http://www.ljlj.cc/article/view/5974/" target="_blank" class="org">欧式温馨范，田园风格卫生间唯美装饰</a>
+              <p>卫生间是现在家居生活中不可缺少的重要空间，据数据显示人类一生有六分之一的时间是在马桶上度过的</p>
+            </li>
+          </ul>
+        </div>
+        <div class="zxpic">
+          <div class="zxpicup cfix">
+
+          	<a href="http://www.ljlj.cc/article/view/5954/" target="_blank"><img id='img_1' src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_16.jpg}" width="260" height="285" class="border2w "  alt=""/></a>
+
+          	<a href="http://www.ljlj.cc/article/view/5955/" target="_blank"> <img  id='img_2'  src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_18.jpg}" width="230" height="285" class="border2w" alt=""/></a>
+
+          	<a href="http://www.ljlj.cc/article/view/5956/" target="_blank"><img id='img_3' src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_20.jpg}" width="260" height="285" class="border2w" alt=""/></a>
+          </div>
+          <div class="zxpicdown cfix">
+            
+          	<a href="http://www.ljlj.cc/article/view/5958/" target="_blank"><img id='img_4' src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_29.jpg}" width="377" height="221" class="border2w"  alt=""/></a>
+            
+          	<a href="http://www.ljlj.cc/article/view/5974/" target="_blank"><img id='img_5' src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_31.jpg}" width="379" height="221" class="border2w"  alt=""/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jaj cfix">
+      <p>&nbsp;</p>
+      <div class="gdshtit gdshtit2">
+        <span>
+          <a href="http://www.ljlj.cc/article/30/" target="_blank" class="more">MORE ></a>
+        </span>
+      </div>
+      <div class="jaj1">
+        <a href="#" target="_blank">
+          <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_40.jpg}" width="380" height="150" class="mb1"  alt=""/>
+        </a>
+        <div class="fg1">
+          <div class="balck1">
+            <ul class="fgtit">
+              <li>
+                <h3>现代简约风</h3>
+              </li>
+              <li class="bordernone">
+                <p>
+                  <a href="http://www.ljlj.cc/article/view/5679/" target="_blank" class="wa">省空间不省创意的经典 ></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="jaj2">
+        <div class="fg2">
+          <div class="balck2">
+            <ul class="fgtit">
+              <li>
+                <h3>法式田园风</h3>
+              </li>
+              <li class="bordernone">
+                <p>
+                  <a href="http://www.ljlj.cc/article/view/5747/" target="_blank" class="wa">拥抱浪漫与时尚的创意 ></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="fg3">
+          <div class="balck2">
+            <ul class="fgtit">
+              <li>
+                <h3>简约欧式风</h3>
+              </li>
+              <li class="bordernone">
+                <p>
+                  <a href="http://www.ljlj.cc/article/view/5748/" target="_blank" class="wa">简约唯美与色彩同居的精彩 ></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="jaj3">
+        <div class="fg4">
+          <div class="balck3">
+            <ul class="fgtit">
+              <li>
+                <h3>美国乡村风</h3>
+              </li>
+              <li class="bordernone">
+                <p>
+                  <a href="http://www.ljlj.cc/article/view/5678/" target="_blank" class="wa">家居生活随性不羁的惬意 ></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="fg5">
+          <div class="balck3">
+            <ul class="fgtit">
+              <li>
+                <h3>中式古典风</h3>
+              </li>
+              <li class="bordernone">
+                <p>
+                  <a href="http://www.ljlj.cc/article/view/5675/" target="_blank" class="wa">打造古典优雅的美感 ></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="qzj">
+      <p>&nbsp;</p>
+      <div class="gdshtit gdshtit3">
+        <span>
+          <a href="http://topic.ljlj.cc/2014/Parenting.html" target="_blank" class="more">MORE ></a>
+        </span>
+      </div>
+      <div class="qzj1">
+        <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_56.jpg}" width="399" height="352"  alt=""/>
+        <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_61.jpg}" width="399" height="286" class="mb2"  alt=""/>
+        <a href="http://topic.ljlj.cc/2014/fulaisha.html" target="_blank">
+          <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_67.jpg}" width="399" height="280"  alt=""/>
+        </a>
+      </div>
+      <div class="qzj2">
+        <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_58.jpg}" width="398" height="352"  alt=""/>
+        <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_62.jpg}" width="398" height="286" class="mb2"  alt=""/>
+        <a href="http://topic.ljlj.cc/2014/songbaowangguo.html" target="_blank">
+          <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_68.jpg}" width="398" height="280"  alt=""/>
+        </a>
+      </div>
+      <div class="qzj3">
+        <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_60.jpg}" width="399" height="352"  alt=""/>
+        <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_63.jpg}" width="399" height="286" class="mb2"  alt=""/>
+        <a href="http://topic.ljlj.cc/2014/doudingzhuangyuan.html" target="_blank">
+          <img src="{res file=js/loading.gif}" original="{res file=images/lj_topic_tashuo/gdsh_69.jpg}" width="399" height="280"  alt=""/>
+        </a>
+      </div>
+    </div>
+  </div>
+<script  type="text/javascript">
+/*页面初始化b组先隐藏*/
+$("p[id^='fbl']").hide();
+var dataArr = new Array();
+var stopflag = '';/*数据总数*/
+var flag = 0;/*显示隐藏开关*/
+var offset = 0;/*偏移量标示符*/
+/*ajax函数*/
+function ajax()
+{
+    $.ajax({
+         type:'POST',
+	     async:false,
+         cache:false,
+         url:'/index.php?app=lj_topic&act=ajax',
+         data:{start:offset,length:8},
+         success:function(e){ 
+            var ob = eval('('+e+')');
+            if(ob.status==1)
+            {  
+                /*数据赋值*/
+                dataArr['data'] = ob.data.newarr;
+                stopflag = ob.data.datanum;
+            }         
+         }
+    });
+}
+/*控制写入dom*/
+function ctrwdom()
+{
+    var zuname = '';
+    if(flag == 0)
+    {
+        var zuname = 'al';   
+    }
+    else
+    {
+        var zuname = 'bl';
+    }
+    $.each(dataArr['data'], function(index, content)
+    {
+         $('#'+zuname+index).html(content.Comment_content);
+         $('#'+zuname+index).attr('href','http://www.ljlj.cc/goods/'+content.goods_id+'/');
+    });
+}
+/*控制显示隐藏*/
+function ctrdom()
+{
+    if(flag == 0)
+    {
+        $("p[id^='fal']").fadeIn('slow');
+        $("p[id^='fbl']").fadeOut('nomal');
+    }
+    else
+    {
+        $("p[id^='fbl']").fadeIn('slow');
+        $("p[id^='fal']").fadeOut('nomal');
+    }
+}
+/*保存改变*/
+function saveChange()
+{
+    if(flag == 0)
+    {
+        flag = 1;
+    }
+    else
+    {
+        flag = 0;
+    }
+    /*如果当前偏移量已经到达末尾,重新从0开始*/
+    if(offset >= (stopflag-8))
+    {
+        offset = 0;
+    }
+    else
+    {
+        offset += 8; 
+    }
+}
+/*总函数*/
+function all()
+{
+    ajax();
+    ctrwdom();
+    ctrdom();
+    saveChange();
+}
+setTimeout('all()',0.01);
+setInterval('all()',6000);
+
+/*懒惰加载*/
+jQuery(document).ready(
+	function($){
+	$("img:not(.noLazy)").lazyload({
+		 placeholder : "{res file=js/loading.gif}",
+		 effect      : "fadeIn"
+	});
+});
+
+/*鼠标事件，鼠标移上左侧链接，右侧图片对应显示效果*/
+function imgchange(lid,idflag)
+{
+    var arr = lid.split('_');
+    if(idflag == 1)
+    {
+        $('#img_'+arr[1]).removeClass('border2w').addClass('border2g');
+    }
+    else
+    {
+        $('#img_'+arr[1]).removeClass('border2g').addClass('border2w');
+    }
+}
+</script>
+{include file="new_footer.html"}
