@@ -17,7 +17,7 @@
  */
 function date_replace()
 {
-   return str_replace(array('-',' ',':'),'',date('Y-m-d H:i:s'));
+     return str_replace(array('-',' ',':'),'',date('Y-m-d H:i:s'));
 }
 
 /*
@@ -27,15 +27,15 @@ function date_replace()
  * */
 function dates()
 {
-	$arr = array('星期日','星期一','星期二','星期三','星期四','星期五','星期六');
-	if(array_key_exists(date(w),$arr))
-	{
-		return "今天是".$arr[date(w)];
-	}
-	else
-	{
-		return "您好:),今天为您显示火星上的日期 ^_^";
-	}
+     $arr = array('星期日','星期一','星期二','星期三','星期四','星期五','星期六');
+     if(array_key_exists(date(w),$arr))
+     {
+	  return "今天是".$arr[date(w)];
+     }
+     else
+     {
+     	  return "您好:),今天为您显示火星上的日期 ^_^";
+     }
 }
 ?>
 
