@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src='/js/jquery-1.11.0.min.js'></script>
+<title>雪域天狼</title>
+<style>
+</style>
+</head>
+<body>
+	<h3 >张欢 - ajax跨域测试</h3>
+	<h6><input type='button' id='start' value='开始' /></h6>
+	<table>
+		<tr>
+			<td>女 : <span id='woman'></span></td>
+		</tr>
+        <tr>
+			<td>男 : <span id='men'></span></td>
+		</tr>
+	</table>
+	<div>xueyutianlang javascript</div>
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="kuayu"
+		data-title="张欢测试多说" data-url="http://ceshi.com/index.php"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xueyutianlang"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+<!-- 多说公共JS代码 end -->
+
+<!--ajax 跨域请求 start-->
+<script>
+/*注:  1. ajax是建立在jquery 上的 例如 : $.ajax $是jquery的简写方式
+       2. jquery实现ajax访问很多方式，同时也支持post和get，但是只有get方式才能实现跨域访问。
+       3. 实现get方式 $.ajax函数也可以，jquery封装的 $.getJSON函数更简单一些。
+	   4.  jQuery.getJSON( url, [data], [callback] ) 跨域加载JSON数据。
+
+		   url: 发送请求的地址
+
+		   data : (可选) 待发送key/value参数
+
+		   callback: (可选) 载入成功时的回调函数
+*/
+var url='http://ceshi_ajax.com/jsonp.php';
+var flag = 0;
+function ajax(url,str)
+{
+	//ajax 跨域请求,ajax中只有type为get的方式才能实现跨域请求
+	$.ajax({
+		type:'GET',//注:type默认值为get,故可写可不写
+		url : url,
+		data: {str:str},
+		dataType:'jsonp',
+		jsonpCallback:"checkSub",
+	})
+}
+//回调函数 处理提交结果提示
+function checkSub(data)
+{
+	switch (data.status)
+	{
+		case 1:
+		    ctrwdom(data.arr)
+			break;
+		default:
+		    alert(data.arr);
+			break;
+	}
+}
+
+/*控制写入dom*/
+function ctrwdom(arr)
+{
+	$.each(arr, function(index, content)
+	{
+		   if(index == 0)
+		   {
+			   $('#woman').html('');
+			   $('#woman').html(content);
+		   }
+		   else
+		   {
+			   $('#men').html('');
+			   $('#men').html(content);
+		   }
+	   });
+	flag++;
+}
+function all()
+{
+	var dataArr = new Array();
+    dataArr[0]= 'yaoqiu';
+	dataArr[1]= 'reason';
+	dataArr[2]= 'song';
+	if(flag > dataArr.length-1)
+	{
+		flag=0;
+	}
+	ajax(url,dataArr[flag]);
+}
+$('#start').click(function (){
+	setTimeout('all()',0.01);
+    setInterval('all()',3000);
+});
+</script>
+<!--ajax 跨域请求 end-->
+</body>
+</html>
