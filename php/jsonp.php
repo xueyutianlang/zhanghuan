@@ -27,7 +27,7 @@ function jsonData()
 	{
 		switch($_GET['str'])
 		{
-		     case 'yaoqiu' :
+		     case 'requirements' :
 				 echo 	'checkSub(' . json_encode(array('status'=>1,'arr'=>$arr[$_GET['str']])) . ')';
 				 break;
 			 case 'reason' :
