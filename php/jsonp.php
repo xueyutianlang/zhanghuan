@@ -1,5 +1,21 @@
 <?php
+/**
+ * description : ajax跨域请求jsonp
+ * @author     : zhanghuan<xueyutianlang@163.com>
+ * @date       : 2015-01-16  
+ *
+ **/
 header("Content-type:text/html;charset=utf-8");
+/*
+ * @ajax跨域请求jsonp
+ * @author : zhanghuan
+ * @date   : 2015-01-16
+ * @demo   : jsonData(),value : checkSub({"status":0,"error":"\u8fdd\u6cd5\u8bf7\u6c42"}); 
+ *
+ * @param  : [string] - $callback - 回调函数名称
+ *         : [string] - $str      - 对话数组名称
+ * @return : jsonp
+ */
 function jsonData()
 {
 	$arr = array(
