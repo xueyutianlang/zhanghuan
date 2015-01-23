@@ -74,8 +74,9 @@ function substring($arr)
  */
 function stringCompare($str1,$str2,$offset=1,$length=1)
 {
-	echo substr_compare($str1,$str2,$offset,$length);
+	return substr_compare($str1,$str2,$offset,$length);
 }
+
 ?>
 
 
