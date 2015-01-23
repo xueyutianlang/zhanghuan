@@ -43,6 +43,23 @@ function stringDiff($str1,$str2,$length=0,$mod='strcmp')
 			 break;
 	}
 }
+
+/*
+ * @php 舍弃字符串最后一个字符
+ *
+ * @param  : [array] - $arr - 数组
+ * @return : [string] - $string - 字符串 
+ */
+function substring($arr)
+{	
+	$string = '';
+	foreach($arr as $value)
+	{
+        $string .=$value.',';
+	}
+	return substr($string,0,-1);
+}
+
 ?>
 
 
