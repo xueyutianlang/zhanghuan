@@ -46,6 +46,7 @@ function stringDiff($str1,$str2,$length=0,$mod='strcmp')
 
 /*
  * @php 舍弃字符串最后一个字符
+ * @date   : 2015-01-23
  *
  * @param  : [array] - $arr - 数组
  * @return : [string] - $string - 字符串 
