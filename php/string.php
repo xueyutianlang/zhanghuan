@@ -61,6 +61,21 @@ function substring($arr)
 	return substr($string,0,-1);
 }
 
+/*
+ * @php 安全比较二进制字符串
+ * @date  : 2015-01-23
+ *
+ * @param : [string] - $str1 　- 字符串 1 
+ *        : [string] - $str2 　- 字符串 2
+ *        : [int]    - $offset - 偏移量，默认１
+ *        : [int]    - $length - 长度，默认１
+ * @return: [int]    - $int  　- 如果 str1 从偏移位置 offset 起的子字符串小于 str2，则返回小于 0 的数；如果大于 str2，则返回大于 0 的数；如果二者相等，则返回 0。如果 offset 大于等于 str1 的长度或 length 被设置为小于 1 的值 
+ *
+ */
+function stringCompare($str1,$str2,$offset=1,$length=1)
+{
+	echo substr_compare($str1,$str2,$offset,$length);
+}
 ?>
 
 
