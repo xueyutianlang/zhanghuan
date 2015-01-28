@@ -26,7 +26,7 @@
  */
 function money()
 {
-	$money=123;
+    $money=123;
     return sprintf('%0.2f',$money);	
 }
 ?>
