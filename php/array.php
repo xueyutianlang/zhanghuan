@@ -33,4 +33,26 @@ function statistical()
 	   echo key($array).'|'.current($array);
    }
 
+/*
+ * @在数组中特定位置插入特定元素
+ * @date : 2015-01-28
+ */
+function insert($arr=array(1,2,3,4,5),$i=3)
+{
+    $arrOne = array();
+    $arrTwo = array();
+    foreach($arr as $key=>$value)
+    {
+	    if($key<$i)
+		{
+			array_push($arrOne,$value);
+		}
+		else
+		{
+			array_push($arrTwo,$value);
+		}
+	}
+	return array_merge($arrOne,$arrTwo);
+}
+
 ?>
