@@ -39,20 +39,16 @@ function statistical()
  */
 function insert($arr=array(1,2,3,4,5),$i=3)
 {
-    $arrOne = array();
-    $arrTwo = array();
-    foreach($arr as $key=>$value)
+    $arrNew = array();
+	foreach($arr as $key=>$value)
     {
-	    if($key<$i)
+		if($key==$i)
 		{
-			array_push($arrOne,$value);
+			array_push($arrNew,$nums);
 		}
-		else
-		{
-			array_push($arrTwo,$value);
-		}
+		$arrNew[]=$value;
 	}
-	return array_merge($arrOne,$arrTwo);
+	return $arrNew
 }
 
 ?>
