@@ -5,6 +5,7 @@
  * @date       : 2015-01-28
  *
  **/
+ 
 /*
  * @统计数组中元素出现的个数，并将统计数组进行ksort 排序
  *  
@@ -39,20 +40,20 @@ function arrPoint()
  */
 function insert($arr=array(1,2,3,4,5),$i=3)
 {
-    $arrOne = array();
-    $arrTwo = array();
-    foreach($arr as $key=>$value)
-    {
-	    if($key<$i)
-		{
-			array_push($arrOne,$value);
-		}
-		else
-		{
-			array_push($arrTwo,$value);
-		}
+     $arrOne = array();
+     $arrTwo = array();
+     foreach($arr as $key=>$value)
+     {
+	  if($key<$i)
+	  {
+		array_push($arrOne,$value);
+	  }
+	  else
+	  {
+		array_push($arrTwo,$value);
+	  }
 	}
-	return array_merge($arrOne,$arrTwo);
+     return array_merge($arrOne,$arrTwo);
 }
 
 ?>
