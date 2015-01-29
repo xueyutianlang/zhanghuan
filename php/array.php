@@ -40,33 +40,14 @@ function arrPoint()
  */
 function insert($arr=array(1,2,3,4,5),$i=3)
 {
-<<<<<<< HEAD
-    $arrNew = array();
-	foreach($arr as $key=>$value)
+    foreach($arr as $key=>$value)
     {
-		if($key==$i)
-		{
-			array_push($arrNew,$nums);
-		}
-		$arrNew[]=$value;
-	}
-	return $arrNew
-=======
-     $arrOne = array();
-     $arrTwo = array();
-     foreach($arr as $key=>$value)
-     {
-	  if($key<$i)
-	  {
-		array_push($arrOne,$value);
-	  }
-	  else
-	  {
-		array_push($arrTwo,$value);
-	  }
-	}
-     return array_merge($arrOne,$arrTwo);
->>>>>>> 5b83078a8ee319b448c28e75420bc18afcba63ca
+        if($key==$i)
+        {
+            array_push($arrNew,$nums);
+        }
+        $arrNew[]=$value;
+    }
+    return $arrNew;
 }
-
 ?>
