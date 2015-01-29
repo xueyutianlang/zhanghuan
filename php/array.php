@@ -11,8 +11,8 @@
  */
 function statistical()
 {
-	$array = array('1','3','1','1','3','5');
-	return array_count_values($array);
+     $array = array('1','3','1','1','3','5');
+     return array_count_values($array);
 }
 
 /*
@@ -25,13 +25,13 @@ function statistical()
    ★reset():将目前指针无条件移至第一个索引位置。
  *
  */   
-   function arrPoint()
-   {
-	   $array=array(1,2,3,4,5,6);
-	   echo key($array).'|'.current($array);
-	   next($array);
-	   echo key($array).'|'.current($array);
-   }
+function arrPoint()
+{
+      $array=array(1,2,3,4,5,6);
+      echo key($array).'|'.current($array);
+      next($array);
+      echo key($array).'|'.current($array);
+}
 
 /*
  * @在数组中特定位置插入特定元素
