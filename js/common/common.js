@@ -53,3 +53,15 @@ function stringLength(inputId,number)
 	return returnValue;
 }
 
+/*
+ * javascript 实现锚点效果
+ *
+ * @author -- zhanghuan
+ * @data   -- 2014.12.03
+ *
+ */
+function anthorClick()
+	{
+	    $(this).addClass('icon-active').parent().siblings().children('a').removeClass('icon-active');
+	}
+
