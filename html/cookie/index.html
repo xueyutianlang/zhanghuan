@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js获取cookie值</title>
+<script type='text/javascript' src='/js/jquery-1.11.0.min.js'></script>
+<style>
+</style>
+<body>
+	<div>
+		<!-- 显示浏览器cookie  -->
+		<div class='list'></div>
+		<div>
+			<a href='javascript:void(0);' id='get'>点击获取cookie</a>	
+		</div>
+	</div>
+<script type='text/javascript'>
+	$(function(){
+		$('#get').click(function(){
+			var cookie = getCookie('user');
+			alert(cookie);
+			if(cookie)
+			{
+			    $('.list').html(cookie);
+			}
+			else
+			{
+			    $('.list').html('null');
+			}
+		});			
+});	
+/*获取cookie */
+function getCookie(name)
+{
+	var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+	if(arr != null) return unescape(arr[2]); return null;
+}
+</script>
+</body>
+</html>
+
