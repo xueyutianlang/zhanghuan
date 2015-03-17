@@ -25,6 +25,8 @@ this code base includes work in writing your own code and learn from others' cod
 ###|&nbsp;&nbsp;├─ Html/
 ###|- DataStructure
 ###|&nbsp;&nbsp;├─ /
+###|- ALGORITHM
+###|&nbsp;&nbsp;├─ /PHP
 ###|- C
 ###|&nbsp;&nbsp;├─ /
 ###|- C++
