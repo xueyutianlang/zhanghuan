@@ -12,6 +12,8 @@ this code base includes work in writing your own code and learn from others' cod
              ****:)*****    　　Common 　Progress       *****(:****
 ```
 ###目录结构:
+###|-ALGORITHM
+###|&nbsp;&nbsp;|- php
 ###|- PHP
 ###|&nbsp;&nbsp;├─ CodeIgniter/
 ###|&nbsp;&nbsp;├─ DEMO/
@@ -40,6 +42,8 @@ this code base includes work in writing your own code and learn from others' cod
 ###|- SHELL
 ###|&nbsp;&nbsp;├─ /
 ###|- QA
+###|&nbsp;&nbsp;├─ /
+###|- REDIS
 ###|&nbsp;&nbsp;├─ /
 
 ```
