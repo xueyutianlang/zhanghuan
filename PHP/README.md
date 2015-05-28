@@ -9,6 +9,7 @@ php代码是由我平时在工作中积累，借鉴他人的优秀代码。
     *CodeIgniter -- CI框架
     *Array       -- php常用数组函数
     *AutoAssocaition　--  自动联想功能
+    *Curl        -- php curl函数常用功能 
     *Date        -- php常用date函数 
     *ExportData  -- php导出excel功能
     *Function    -- 公共函数

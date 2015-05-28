@@ -45,6 +45,8 @@ this code base includes work in writing your own code and learn from others' cod
 ###|&nbsp;&nbsp;├─ /
 ###|- REDIS
 ###|&nbsp;&nbsp;├─ /
+###|- NOTICE
+###|&nbsp;&nbsp;├─ /
 
 ```
 *-*-*-*====_*_*_*_*------- 　In the progress of unfinished　 ------*_*_*_*_====*-*-*-*
