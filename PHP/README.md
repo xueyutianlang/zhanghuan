@@ -6,7 +6,8 @@ php代码是由我平时在工作中积累，借鉴他人的优秀代码。
 #####PHP目录：
 ```
     *AjaxApp     -- ajax调用php接口
-    *CodeIgniter -- CI框架
+    *CI          -- 基于CI框架的实例
+    *CodeIgniter -- 基于CI框架的restful
     *Array       -- php常用数组函数
     *AutoAssocaition　--  自动联想功能
     *Curl        -- php curl函数常用功能 
