@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>雪域天狼-表单提交</title>
+<script type="text/javascript" src="/static/js/jquery1.8.3.min.js" ></script>
+</head>
+<body>
+<div>xueyutianlang javascript</div>
+<div><form action='' method='post'></div>
+<div>
+	<p><span class="detailsWidth"><span class="red">*</span>自定义价格：</span>
+		<input type="radio" class="priceRadio" id='iscustomprice'  name='is_custom_price' value=2  />是
+		<input type="radio" class="priceRadio radioMagin" id='iscustomprices'  name='is_custom_price' value=1 checked="checked"/>否
+  </p>
+</div>
+<div></form></div>
+<script type="text/javascript" >
+		
+/*控制文本框可不可用*/
+var yes = 2;
+$(".priceRadio").click(function(){
+	var id = this.id;
+	var v_val = $('#'+id).val();
+	if (v_val =='2')
+	{
+	    yes = 1;
+	    var customfoodname = $('[name="custom_food_name"]').attr('disabled',false);
+		$('#hehe').css('color','black');
+	}
+	else if (v_val =='1' )
+	{
+	   yes = 2;
+	   var customfoodname = $('[name="custom_food_name"]').attr('disabled',true);
+	   $("#hehe").css("color",'#999999');
+	}
+});
+</script>	
+</body>
+</html>
