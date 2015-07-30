@@ -21,4 +21,6 @@ php代码是由我平时在工作中积累，借鉴他人的优秀代码。
     *PhpRegularString --  随机字符串
     *PhpString   -- php字符处理
     *RestServer  -- RESTFUL 架构（基于ci的RESTFUL）
+    *WechatPay  -- RESTFUL 架构（基于ci的RESTFUL）
+    *phpQrcode  -- php 
 ```
