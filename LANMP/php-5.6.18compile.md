@@ -27,6 +27,7 @@
     --enable-dmalloc \
     --enable-xml \
     --disable-rpath \
+    --enable-discard-path \
     --enable-safe-mode \
     --enable-bcmath \
     --enable-shmop \
@@ -36,8 +37,10 @@
     --enable-inline-optimization \
     --with-curl \
     --enable-mbregex \
+    --enable-fastcgi \
     --enable-fpm \
     --enable-ftp \
+    --enable-force-cgi-redirect \
     --enable-mbstring \
     --with-mcrypt=/usr \
     --with-openssl \
@@ -51,8 +54,7 @@
     --enable-soap \
     --enable-opcache \
     --enable-shared \
-    --without-pear \
-    --with-libdir=lib \   
-make && make install
+    --with-pear \
+   make && make install
 ```
 
