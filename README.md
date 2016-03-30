@@ -12,10 +12,20 @@ this code base includes work in writing your own code and learn from others' cod
              ****:)*****    　　Common 　Progress       *****(:****
 ```
 ###目录结构:
-###|-LANMP
-###|-SYSTEM
-###|-ALGORITHM
+###|-ALGORITHM 
+###|-APACHE
+###|-C++
+###|-C
+###|-DataStructure
+###|&nbsp;&nbsp;├ Singleton/
+###|-DesignPatterns
 ###|&nbsp;&nbsp;|- php
+###|-Html
+###|-JAVA
+###|-JAVASCRIPT
+###|-LANMP
+###|-NOSQL
+###|&nbsp;&nbsp;├/
 ###|- PHP
 ###|&nbsp;&nbsp;├─ CodeIgniter/
 ###|&nbsp;&nbsp;├─ DEMO/

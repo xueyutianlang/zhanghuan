@@ -23,6 +23,7 @@
    patch -p1 < php-5.2.17-fpm-0.5.14.diff   
 
    ./configure --prefix=/usr/local/php \
+<<<<<<< HEAD
     --disable-rpath \
     --enable-mod-charset \
     --with-apxs2=/usr/local/apache2/bin/apxs \
@@ -114,6 +115,75 @@
     --enable-opcache
    make && make install
 ```
+=======
+   	  --disable-rpath \
+      --enable-mod-charset \
+      --with-apxs2=/usr/local/apache2/bin/apxs \
+      --enable-embed=shared \
+      --enable-fastcgi \
+      --enable-force-cgi-redirect \
+      --enable-discard-path \
+      --enable-fpm \
+      --enable-debug \
+      --with-config-file-path=/usr/local/php/etc \
+      --with-config-file-scan-dir=/usr/local/php/etc/php.d \
+      --enable-safe-mode \
+      --enable-magic-quotes \
+      --enable-dmalloc \
+      --with-libxml-dir=/usr/local/libxml2 \
+      --with-openssl \
+      --with-zlib \
+      --with-bz2 \
+      --with-curl \
+      --with-pcre-dir \
+      --enable-ftp \
+      --with-gd \
+      --with-ttf \
+      --enable-gd-native-ttf \
+      --enable-mbstring \
+      --with-mcrypt=/usr/local/libmcrypt \
+      --with-mhash \
+      --with-mysql=/usr/local/mysql \
+      --with-mysql-sock=/tmp/mysql.sock \
+      --with-jpeg-dir \
+      --with-png-dir \
+      --with-zlib-dir \
+      --with-mysqli=/usr/local/mysql/bin/mysql_config \
+      --with-ncurses \
+      --enable-pcntl \
+      --with-pdo-mysql=/usr/local/mysql/bin/mysql_config \
+      --enable-shmop \
+      --enable-session \
+      --enable-soap \
+      --enable-sockets  \
+      --without-sqlite \
+      --enable-sqlite-utf8 \
+      --enable-sysvmsg \
+      --enable-sysvsem \
+      --enable-sysvshm \
+      --with-tidy \
+      --enable-zip \
+      --without-pear \
+      --enable-shared \
+      --with-iconv=/usr/local/libiconv \
+      --enable-mods-shared=all \
+      --enable-so
+   make && make install
+```
+NOTICE: 若apache 2.4 搭载 较低版本的php会出现以下情况,建议为了良好向下兼容php，请换较低apache版本
+```javascript
+   
+   httpd: Syntax error on line 154 of /usr/local/apache2/conf/httpd.conf: Cannot load modules/libphp5.so into server: /usr/local/apache2/modules/libphp5.so: undefined symbol: unixd_config
+    
+```
+或者参考以下编译参数
+```javascript
+   ./configure --prefix=/usr/local/php --enable-fastcgi --enable-zip --enable-fpm --enable-gd-native-ttf --with-config-file-path=/usr/local/php/etc --with-config-file-scan-dir=/usr/local/php/etc/php.d --with-bz2 --with-curl --with-libxml-dir=/usr/local/libxml2 --with-gd --with-jpeg-dir --with-freetype-dir --with-png-dir --with-mcrypt=/usr/local/libmcrypt --with-mhash --enable-mbstring --with-kerberos --with-gettext --enable-bcmath --with-mysql=/usr/local/mysql --with-mysqli=/usr/local/mysql/bin/mysql_config --with-sqlite --enable-pdo --with-pdo-mysql=/usr/local/mysql/bin/mysql_config --with-openssl --enable-ftp --with-pear --with-zlib --enable-inline-optimization --enable-calendar --enable-magic-quotes --enable-sockets --enable-sysvsem --enable-sysvshm --enable-sysvmsg --disable-debug
+
+```
+
+
+>>>>>>> cfb6a34515ffc7a6060f0f583972852f42d173ab
 
 php 5.2 编译参数详解
 Configuration:

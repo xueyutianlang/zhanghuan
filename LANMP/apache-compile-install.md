@@ -182,3 +182,15 @@ vi /etc/profile #添加apache服务系统环境变量
     /etc/init.d/httpd start
     server httpd restart
 ```
+<<<<<<< HEAD
+=======
+
+NOTICE: 若apache 2.4 搭载 较低版本的php会出现以下情况,建议为了良好向下兼容php，请换较低apache版本
+```javascript
+
+httpd: Syntax error on line 154 of /usr/local/apache2/conf/httpd.conf: Cannot load modules/libphp5.so into server: /usr/local/apache2/modules/libphp5.so: undefined symbol: unixd_config
+
+```
+
+
+>>>>>>> cfb6a34515ffc7a6060f0f583972852f42d173ab
