@@ -77,6 +77,7 @@ $array = array(49,38,65 ,97 ,76 ,13 ,27 ,49);
 
 function quick_sort($array)
 {
+    //递归停止的标尺,即传的数组仅有一个元素时，否则变成死循环
     if(count($array) <=1) return $array;
     //找到标准
     $biaozhun = $array[0];
