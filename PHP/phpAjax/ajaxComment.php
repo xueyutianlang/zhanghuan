@@ -12,7 +12,6 @@ class ajaxComment extends MY_Controller
 		parent::__construct();
     }	
 	
-	
 	/* 评论ajax方式
 	 *
 	 * @param  : [int]  - $start - 偏移量
