@@ -20,6 +20,7 @@ php代码是由我平时在工作中积累，借鉴他人的优秀代码。
     *phpExcel           -- php 导出excel
     *phpFile            -- php 文件操作 
     *phpFunction        -- php 公共函数
+    *phpLoop            -- php 循环
     *phpMac             -- php 获取不同系统下的mac
     *phpMailer          -- php 基于phpMailer自动邮件发送
     *phpMkdir           -- php 目录操作
