@@ -29,13 +29,15 @@ echo '\n指针是否越过数组末端: ';
 var_dump(each($array));
 
 //因数组指针已到达末端,返回false 以下验证，数组赋值是否会重置原来的数组指针
-$test = $array;
 
 while($list = each($array))
 {
     var_dump($list);
     sleep(1);
 }
+
+$test = $array;
+
 echo '\n 数组赋值测试指针是否越过数组末端: ';
 var_dump(each($array));
 
@@ -51,9 +53,9 @@ function doEach()
 
 }
 
-doEach($array);
-doEach($array);
-
+doEach();
+doEach();
+ 
 echo '\n 函数调用测试指针是否越过数组末端: ';
 var_dump(each($array));
 
@@ -73,6 +75,13 @@ funEach($array);
 
 echo '\n 函数直接调用测试指针是否越过数组末端: ';
 var_dump(each($array));
+
+/* each 函数与 list 配合使用 */
+
+$arr = array('a'=>1,'b'=>2,'c'=>3);
+list($num['a'],$num['b']) = each($arr);
+var_dump($num);
+
 
 
 
