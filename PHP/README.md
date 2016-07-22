@@ -31,6 +31,8 @@ php代码是由我平时在工作中积累，借鉴他人的优秀代码。
     *phpRegularString   -- php 正则表达
     *phpDataType        -- php 常见数据类型
     *phpString          -- php 字符串
+    *phpStructures      -- php 语言结构
+    *phpVar             -- php 变量
     *RestServer
     *WechatPay         
 ```
